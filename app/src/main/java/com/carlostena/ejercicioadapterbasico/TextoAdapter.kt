@@ -2,6 +2,7 @@ package com.carlostena.ejercicioadapterbasico
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
 import com.carlostena.ejercicioadapterbasico.databinding.ItemTextoBinding
 
@@ -19,7 +20,13 @@ class TextoAdapter : RecyclerView.Adapter<TextoAdapter.TextoViewHolder>() {
     }
 
     override fun onBindViewHolder(holder: TextoViewHolder, position: Int) {
-        holder.itemBinding.textView.text = "Estoy en la pos $position"
+        if (position %2 == 0) {
+            holder.itemBinding.layoutPrincipal.setBackgroundColor(ContextCompat.getColor(holder.itemBinding.root.context, R.color.design_snackbar_background_color))
+            holder.itemBinding.textView.text = "La pos $position es par"
+        } else {
+            holder.itemBinding.layoutPrincipal.setBackgroundColor(ContextCompat.getColor(holder.itemBinding.root.context, R.color.design_default_color_error))
+            holder.itemBinding.textView.text = "La pos $position es impar"
+        }
     }
 
 }
