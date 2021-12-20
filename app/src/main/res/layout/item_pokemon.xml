@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout_principal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp"
+    android:orientation="vertical"
+    android:background="@color/design_default_color_error">
+
+    <TextView
+        android:id="@+id/tv_nombre"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:text="Texto"/>
+    <TextView
+        android:id="@+id/tv_vida"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="end"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/b_quitar_vida"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Quitar vida"
+            android:layout_margin="10dp"
+
+            android:layout_weight="1"/>
+        <Button
+            android:id="@+id/b_sumar_vida"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Suma vida"
+            android:layout_margin="10dp"
+            android:layout_weight="1"/>
+    </LinearLayout>
+</LinearLayout>
